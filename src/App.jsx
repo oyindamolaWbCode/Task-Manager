@@ -1,11 +1,22 @@
 import { useState } from 'react'
+import { Route, createBrowserRouter, createRoutesFromElements, RouterProvider }from 'react-router-dom';
+import Home from "./Components/Task"
 
 
-function App() {
+const router = createBrowserRouter(
+  createRoutesFromElements(
+    <Route>
+    <Route path="/" element={<Home/>} /> 
+    </Route>
+  )
+)
+
+function App({routes}) {
 
   return (
     <>
-      <div>     
+      <div className='Tasks-display'>  
+      <RouterProvider router={router}/>   
       </div>
     </>
   )
