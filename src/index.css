@@ -1,69 +1,83 @@
-/* :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
 
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+  @import url('https://fonts.googleapis.com/css2?family=Commissioner:wght@200&family=Josefin+Sans:ital@1&family=Montserrat:ital,wght@0,100;0,600;1,200&family=Overpass:wght@300&family=Poppins:wght@300&family=Roboto:wght@300;500&display=swap');
 
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-text-size-adjust: 100%;
+body{
+  font-family: 'Poppins', sans-serif;
 }
 
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
+.image-{
+
+  background-image: url(./assets/Images/bg-desktop-light.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height:300px;
+  max-width:100%;
 }
 
-body {
-  margin: 0;
+.image-margin{
+  padding: 120px 0px;
+}
+
+
+.headings{
   display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
+  justify-content: space-evenly;
+  
 }
 
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+.headings>span{
+  font-weight: 600;
+  font-size: 20px;
+  margin-bottom: 30px;
 }
 
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+.AddTask{
+  text-align: center;
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
-} */
+input[type='text']{
+  height:40px;
+  width:370px;
+  margin-right: 10px;
+  border-radius: 5px;
+}
+
+input[type='date']{
+  margin-right: 5px;
+}
+
+button{
+  background-color: transparent;
+  color:brown;
+}
+
+.OutputTodo{
+  text-align: center;
+}
+
+.cancel{
+  color:red;
+  margin-left: 15px;
+}
+
+.complete{
+  color: green;
+  margin-right: 15px;
+}
+
+.top-react-icons{
+  font-size: 1.5rem;
+  margin-right: 10px;
+}
+
+.flexy{
+  display: flex;
+  justify-content: center;
+  
+}
+
+
+li{
+  list-style: none;
+}
