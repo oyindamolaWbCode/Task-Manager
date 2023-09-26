@@ -13,12 +13,12 @@ const TaskManager = () => {
 
     //craete new task
 
-    const newTask = {name: taskName, dueDate};
+    const newTask = { name: taskName, dueDate, completed: false };
 
     //Add new task to the tasks state
     setTasks([...tasks, newTask]);
 
-    // Clear the input fields
+    // Clear the input fields onsubmit
     document.getElementById("taskName").value = "";
     document.getElementById("dueDate").value = "";
 
@@ -30,6 +30,20 @@ const TaskManager = () => {
     updatedTasks.splice(index, 1);
     setTasks(updatedTasks);
   };
+
+  useEffect(() => {
+    // Load tasks from localStorage when the component mounts
+    const savedTasks = localStorage.getItem("tasks");
+    if (savedTasks) {
+      const parsedTasks = JSON.parse(savedTasks);
+      setTasks(parsedTasks);
+    }
+  }, []);
+
+  useEffect(() => {
+    // Save tasks to localStorage whenever the tasks state changes
+    localStorage.setItem("tasks", JSON.stringify(tasks));
+  }, [tasks]);
 
 
   return (
@@ -49,7 +63,6 @@ const TaskManager = () => {
       </div>
       <div className="OutputTodo">
         <ul>
-          {/* Map over the tasks and display them */}
           {tasks.map((task, index) => (
             <li key={index}
             className={task.completed ? "completed" : ""}>
