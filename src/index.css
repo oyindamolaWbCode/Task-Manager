@@ -41,6 +41,7 @@ input[type='text']{
   width:370px;
   margin-right: 10px;
   border-radius: 5px;
+  margin-bottom: 15px;
 }
 
 input[type='date']{
@@ -54,6 +55,7 @@ button{
 
 .OutputTodo{
   text-align: center;
+  margin-top: 20px;
 }
 
 .cancel{
@@ -64,6 +66,11 @@ button{
 .complete{
   color: green;
   margin-right: 15px;
+  text-decoration: line-through;
+}
+
+.completed {
+  text-decoration: line-through;
 }
 
 .top-react-icons{
