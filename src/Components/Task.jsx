@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { GiCancel } from "react-icons/gi";
+import { RxCross1 } from "react-icons/rx";
 import { GiCheckMark } from "react-icons/gi";
 import { IconContext } from "react-icons";
 
@@ -75,6 +75,7 @@ const TaskManager = () => {
         </div>
       </div>
       <div className="OutputTodo">
+        <div className="output-list">
         <ul>
           {tasks.map((task, index) => (
             <li key={index}
@@ -83,14 +84,11 @@ const TaskManager = () => {
                 <p>{task.name}</p>
               </span>
               <div className="flexy">
-                <h6>{task.dueDate}</h6>
+                <h6>Due on: {task.dueDate}</h6>
                 <div className="indicator">
                   <IconContext.Provider value={{ className: "top-react-icons" }}>
                     <span>
-                      <GiCancel className="cancel"  onClick={() => deleteTask(index)}/>
-                    </span>
-                    <span>
-                      <GiCheckMark className="complete"/>
+                      <button onClick={() => deleteTask(index)} className="butCanc">Delete<RxCross1 className="cancel"/></button>
                     </span>
                   </IconContext.Provider>
                 </div>
@@ -98,6 +96,7 @@ const TaskManager = () => {
             </li>
           ))}
         </ul>
+        </div>
       </div>
     </div>
   );
