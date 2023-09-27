@@ -8,8 +8,19 @@ const TaskManager = () => {
 
   const addTasks = () =>{
 //Get task name and due date
-    const taskName = document.getElementById("taskName").value;
+    const taskName = document.getElementById("taskName").value.trim();
     const dueDate = document.getElementById("dueDate").value;
+
+    if (!taskName) {
+      alert("Please enter a task name.");
+      return; // Don't proceed if the task name is empty
+    }
+
+     // Check if a valid date is entered
+  if (!dueDate) {
+    alert("Please enter a valid due date.");
+    return; // Don't proceed if the date is empty
+  }
 
     //craete new task
 
@@ -54,10 +65,12 @@ const TaskManager = () => {
             <span>Hi!, It's a beautiful day</span>
           </div>
           <div className="AddTask">
-            <input type="text" id="taskName" required placeholder="Write a todo" />
+            <form>
+            <input type="text" id="taskName" placeholder="Write a todo" required />
             <label>Due Date</label>
-            <input type="date" id="dueDate" name="trip-start" />
+            <input type="date" id="dueDate" name="trip-start" required />
             <button onClick={addTasks}>Add Todo</button>
+  </form>
           </div>
         </div>
       </div>
