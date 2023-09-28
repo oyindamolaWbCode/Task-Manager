@@ -69,7 +69,7 @@ const TaskManager = () => {
             <input type="text" id="taskName" placeholder="Write a todo" required />
             <label>Due Date</label>
             <input type="date" id="dueDate" name="trip-start" required />
-            <button onClick={addTasks}>Add Todo</button>
+            <button onClick={addTasks} className="addButton">Add Todo</button>
   </form>
           </div>
         </div>

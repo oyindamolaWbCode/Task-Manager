@@ -48,11 +48,19 @@ input[type='text']{
 
 input[type='date']{
   margin-right: 5px;
+  padding: 5px 15px;
 }
 
 button{
   background-color: transparent;
   color:brown;
+}
+
+.addButton{
+  padding: 5px 10px;
+  border-radius: 5px 0px 5px 2px;
+  color:black;
+  font-size: 15px;
 }
 
 .OutputTodo{
@@ -91,6 +99,7 @@ button{
   margin-top: -10px;
   border: 1cm solid transparent;
 }
+
 li{
   list-style: none;
   border-bottom: 1px solid hsl(234, 11%, 52%);
@@ -117,13 +126,13 @@ dl, ol, ul {
   margin-top: 0px;
 
 }
-@media (max-width: 350px) {
+@media (max-width: 321px) {
   
 li{
   list-style: none;
   border-bottom: 1px solid hsl(234, 11%, 52%);
   background-color:hsl(235, 21%, 11%);
-  width:310px;
+  width:300px;
   margin-top:20px;
   color: hsl(234, 11%, 52%);
   
@@ -138,13 +147,13 @@ input[type='text']{
 }
 }
 
-@media (max-width: 500px) {
+@media (min-width: 325px) and (max-width: 428px) {
   
   li{
+    width:360px;
     list-style: none;
     border-bottom: 1px solid hsl(234, 11%, 52%);
     background-color:hsl(233, 12%, 14%);
-    width:400px;
     margin-top:20px;
     color: hsl(234, 11%, 52%);
     
